@@ -25,8 +25,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 /* eslint-disable */
 
-import { isValueObject } from "./immutable/utils";
-
 type Tester = (a: any, b: any) => boolean | typeof undefined;
 
 // Extracted out of jasmine 2.5.2
@@ -74,12 +72,6 @@ function eq(a, b, aStack, bStack, customTesters): boolean {
 
   if (a instanceof Error && b instanceof Error) {
     return a.message == b.message;
-  }
-
-  // CUSTOM JEST CHANGE:
-  // If a value object is detected, we use the defined equals method
-  if (isValueObject(a) && isValueObject(b)) {
-    return a.equals(b);
   }
 
   // Identical objects are equal. `0 === -0`, but they aren't identical.

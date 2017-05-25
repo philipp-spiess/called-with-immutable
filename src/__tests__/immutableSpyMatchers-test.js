@@ -99,5 +99,21 @@ const DemoRecord = Immutable.Record({ a: null, b: null });
         expect(fn).not[calledWith](indirectlyCreated, directlyCreated)
       ).toThrowErrorMatchingSnapshot();
     });
+
+    test(`${calledWith} works with ${mockName} and Map`, () => {
+      const fn = getFunction();
+
+      const m1 = new Map([[1, 2]]);
+      const m2 = new Map([[1, 2]]);
+      const m3 = new Map([["a", "b"]]);
+
+      fn(m1, m2);
+
+      expect(fn).not[calledWith](m1, m3);
+
+      expect(() =>
+        expect(fn)[calledWith](m1, m3)
+      ).toThrowErrorMatchingSnapshot();
+    });
   });
 });

@@ -32,8 +32,8 @@ const IteratorSymbol = Symbol.iterator;
 const hasIterator = object => !!(object != null && object[IteratorSymbol]);
 const iterableEquality = (a, b) => {
   if (
-    typeof a !== 'object' ||
-    typeof b !== 'object' ||
+    typeof a !== "object" ||
+    typeof b !== "object" ||
     Array.isArray(a) ||
     Array.isArray(b) ||
     !hasIterator(a) ||
