@@ -28,6 +28,9 @@ We extend the support for Immutable.js equality checks to all other matchers.
 
 ## Future plans
 
+First of all we must find a way to allow Immutable.js objects to hold other
+objects and still be able to tell if those are equal.
+
 To further improve the experience when working with Jest and Immutable.js, we
 are working on additional matchers as well including:
 

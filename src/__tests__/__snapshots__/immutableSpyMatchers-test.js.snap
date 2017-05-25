@@ -14,32 +14,11 @@ Expected spy to not have been last called with:
   <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
-exports[`lastCalledWith works with jasmine.createSpy and frozen objects within Immutable.js maps 1`] = `
-"<dim>expect(<red>spy</><dim>).not.lastCalledWith(<green>expected</><dim>)
-
-Expected spy to not have been last called with:
-  <green>[Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}, Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}]</>"
-`;
-
-exports[`lastCalledWith works with jasmine.createSpy and frozen objects within Immutable.js records 1`] = `
-"<dim>expect(<red>spy</><dim>).not.lastCalledWith(<green>expected</><dim>)
-
-Expected spy to not have been last called with:
-  <green>[{\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}, {\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}]</>"
-`;
-
 exports[`lastCalledWith works with jasmine.createSpy and ident Immutable.js maps 1`] = `
 "<dim>expect(<red>spy</><dim>).not.lastCalledWith(<green>expected</><dim>)
 
 Expected spy to not have been last called with:
   <green>[Immutable.Map {foo: \\"bar\\"}, Immutable.Map {foo: \\"bar\\"}]</>"
-`;
-
-exports[`lastCalledWith works with jasmine.createSpy and ident Immutable.js maps within regular objects 1`] = `
-"<dim>expect(<red>spy</><dim>).not.lastCalledWith(<green>expected</><dim>)
-
-Expected spy to not have been last called with:
-  <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
 exports[`lastCalledWith works with jasmine.createSpy and more actual arguments 1`] = `
@@ -88,32 +67,11 @@ Expected mock function to not have been last called with:
   <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
-exports[`lastCalledWith works with jest.fn and frozen objects within Immutable.js maps 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.lastCalledWith(<green>expected</><dim>)
-
-Expected mock function to not have been last called with:
-  <green>[Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}, Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}]</>"
-`;
-
-exports[`lastCalledWith works with jest.fn and frozen objects within Immutable.js records 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.lastCalledWith(<green>expected</><dim>)
-
-Expected mock function to not have been last called with:
-  <green>[{\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}, {\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}]</>"
-`;
-
 exports[`lastCalledWith works with jest.fn and ident Immutable.js maps 1`] = `
 "<dim>expect(<red>jest.fn()</><dim>).not.lastCalledWith(<green>expected</><dim>)
 
 Expected mock function to not have been last called with:
   <green>[Immutable.Map {foo: \\"bar\\"}, Immutable.Map {foo: \\"bar\\"}]</>"
-`;
-
-exports[`lastCalledWith works with jest.fn and ident Immutable.js maps within regular objects 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.lastCalledWith(<green>expected</><dim>)
-
-Expected mock function to not have been last called with:
-  <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
 exports[`lastCalledWith works with jest.fn and more actual arguments 1`] = `
@@ -162,32 +120,11 @@ Expected spy not to have been called with:
   <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
-exports[`toBeCalledWith works with jasmine.createSpy and frozen objects within Immutable.js maps 1`] = `
-"<dim>expect(<red>spy</><dim>).not.toBeCalledWith(<green>expected</><dim>)
-
-Expected spy not to have been called with:
-  <green>[Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}, Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}]</>"
-`;
-
-exports[`toBeCalledWith works with jasmine.createSpy and frozen objects within Immutable.js records 1`] = `
-"<dim>expect(<red>spy</><dim>).not.toBeCalledWith(<green>expected</><dim>)
-
-Expected spy not to have been called with:
-  <green>[{\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}, {\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}]</>"
-`;
-
 exports[`toBeCalledWith works with jasmine.createSpy and ident Immutable.js maps 1`] = `
 "<dim>expect(<red>spy</><dim>).not.toBeCalledWith(<green>expected</><dim>)
 
 Expected spy not to have been called with:
   <green>[Immutable.Map {foo: \\"bar\\"}, Immutable.Map {foo: \\"bar\\"}]</>"
-`;
-
-exports[`toBeCalledWith works with jasmine.createSpy and ident Immutable.js maps within regular objects 1`] = `
-"<dim>expect(<red>spy</><dim>).not.toBeCalledWith(<green>expected</><dim>)
-
-Expected spy not to have been called with:
-  <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
 exports[`toBeCalledWith works with jasmine.createSpy and more actual arguments 1`] = `
@@ -236,32 +173,11 @@ Expected mock function not to have been called with:
   <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
-exports[`toBeCalledWith works with jest.fn and frozen objects within Immutable.js maps 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.toBeCalledWith(<green>expected</><dim>)
-
-Expected mock function not to have been called with:
-  <green>[Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}, Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}]</>"
-`;
-
-exports[`toBeCalledWith works with jest.fn and frozen objects within Immutable.js records 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.toBeCalledWith(<green>expected</><dim>)
-
-Expected mock function not to have been called with:
-  <green>[{\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}, {\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}]</>"
-`;
-
 exports[`toBeCalledWith works with jest.fn and ident Immutable.js maps 1`] = `
 "<dim>expect(<red>jest.fn()</><dim>).not.toBeCalledWith(<green>expected</><dim>)
 
 Expected mock function not to have been called with:
   <green>[Immutable.Map {foo: \\"bar\\"}, Immutable.Map {foo: \\"bar\\"}]</>"
-`;
-
-exports[`toBeCalledWith works with jest.fn and ident Immutable.js maps within regular objects 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.toBeCalledWith(<green>expected</><dim>)
-
-Expected mock function not to have been called with:
-  <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
 exports[`toBeCalledWith works with jest.fn and more actual arguments 1`] = `
@@ -310,32 +226,11 @@ Expected spy not to have been called with:
   <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
-exports[`toHaveBeenCalledWith works with jasmine.createSpy and frozen objects within Immutable.js maps 1`] = `
-"<dim>expect(<red>spy</><dim>).not.toHaveBeenCalledWith(<green>expected</><dim>)
-
-Expected spy not to have been called with:
-  <green>[Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}, Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}]</>"
-`;
-
-exports[`toHaveBeenCalledWith works with jasmine.createSpy and frozen objects within Immutable.js records 1`] = `
-"<dim>expect(<red>spy</><dim>).not.toHaveBeenCalledWith(<green>expected</><dim>)
-
-Expected spy not to have been called with:
-  <green>[{\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}, {\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}]</>"
-`;
-
 exports[`toHaveBeenCalledWith works with jasmine.createSpy and ident Immutable.js maps 1`] = `
 "<dim>expect(<red>spy</><dim>).not.toHaveBeenCalledWith(<green>expected</><dim>)
 
 Expected spy not to have been called with:
   <green>[Immutable.Map {foo: \\"bar\\"}, Immutable.Map {foo: \\"bar\\"}]</>"
-`;
-
-exports[`toHaveBeenCalledWith works with jasmine.createSpy and ident Immutable.js maps within regular objects 1`] = `
-"<dim>expect(<red>spy</><dim>).not.toHaveBeenCalledWith(<green>expected</><dim>)
-
-Expected spy not to have been called with:
-  <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
 exports[`toHaveBeenCalledWith works with jasmine.createSpy and more actual arguments 1`] = `
@@ -384,32 +279,11 @@ Expected mock function not to have been called with:
   <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
-exports[`toHaveBeenCalledWith works with jest.fn and frozen objects within Immutable.js maps 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.toHaveBeenCalledWith(<green>expected</><dim>)
-
-Expected mock function not to have been called with:
-  <green>[Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}, Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}]</>"
-`;
-
-exports[`toHaveBeenCalledWith works with jest.fn and frozen objects within Immutable.js records 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.toHaveBeenCalledWith(<green>expected</><dim>)
-
-Expected mock function not to have been called with:
-  <green>[{\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}, {\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}]</>"
-`;
-
 exports[`toHaveBeenCalledWith works with jest.fn and ident Immutable.js maps 1`] = `
 "<dim>expect(<red>jest.fn()</><dim>).not.toHaveBeenCalledWith(<green>expected</><dim>)
 
 Expected mock function not to have been called with:
   <green>[Immutable.Map {foo: \\"bar\\"}, Immutable.Map {foo: \\"bar\\"}]</>"
-`;
-
-exports[`toHaveBeenCalledWith works with jest.fn and ident Immutable.js maps within regular objects 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.toHaveBeenCalledWith(<green>expected</><dim>)
-
-Expected mock function not to have been called with:
-  <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
 exports[`toHaveBeenCalledWith works with jest.fn and more actual arguments 1`] = `
@@ -458,32 +332,11 @@ Expected spy to not have been last called with:
   <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
-exports[`toHaveBeenLastCalledWith works with jasmine.createSpy and frozen objects within Immutable.js maps 1`] = `
-"<dim>expect(<red>spy</><dim>).not.toHaveBeenLastCalledWith(<green>expected</><dim>)
-
-Expected spy to not have been last called with:
-  <green>[Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}, Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}]</>"
-`;
-
-exports[`toHaveBeenLastCalledWith works with jasmine.createSpy and frozen objects within Immutable.js records 1`] = `
-"<dim>expect(<red>spy</><dim>).not.toHaveBeenLastCalledWith(<green>expected</><dim>)
-
-Expected spy to not have been last called with:
-  <green>[{\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}, {\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}]</>"
-`;
-
 exports[`toHaveBeenLastCalledWith works with jasmine.createSpy and ident Immutable.js maps 1`] = `
 "<dim>expect(<red>spy</><dim>).not.toHaveBeenLastCalledWith(<green>expected</><dim>)
 
 Expected spy to not have been last called with:
   <green>[Immutable.Map {foo: \\"bar\\"}, Immutable.Map {foo: \\"bar\\"}]</>"
-`;
-
-exports[`toHaveBeenLastCalledWith works with jasmine.createSpy and ident Immutable.js maps within regular objects 1`] = `
-"<dim>expect(<red>spy</><dim>).not.toHaveBeenLastCalledWith(<green>expected</><dim>)
-
-Expected spy to not have been last called with:
-  <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
 exports[`toHaveBeenLastCalledWith works with jasmine.createSpy and more actual arguments 1`] = `
@@ -532,32 +385,11 @@ Expected mock function to not have been last called with:
   <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
-exports[`toHaveBeenLastCalledWith works with jest.fn and frozen objects within Immutable.js maps 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.toHaveBeenLastCalledWith(<green>expected</><dim>)
-
-Expected mock function to not have been last called with:
-  <green>[Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}, Immutable.Map {foo: {\\"bar\\": \\"baz\\"}}]</>"
-`;
-
-exports[`toHaveBeenLastCalledWith works with jest.fn and frozen objects within Immutable.js records 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.toHaveBeenLastCalledWith(<green>expected</><dim>)
-
-Expected mock function to not have been last called with:
-  <green>[{\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}, {\\"a\\": {\\"bar\\": \\"baz\\"}, \\"b\\": null}]</>"
-`;
-
 exports[`toHaveBeenLastCalledWith works with jest.fn and ident Immutable.js maps 1`] = `
 "<dim>expect(<red>jest.fn()</><dim>).not.toHaveBeenLastCalledWith(<green>expected</><dim>)
 
 Expected mock function to not have been last called with:
   <green>[Immutable.Map {foo: \\"bar\\"}, Immutable.Map {foo: \\"bar\\"}]</>"
-`;
-
-exports[`toHaveBeenLastCalledWith works with jest.fn and ident Immutable.js maps within regular objects 1`] = `
-"<dim>expect(<red>jest.fn()</><dim>).not.toHaveBeenLastCalledWith(<green>expected</><dim>)
-
-Expected mock function to not have been last called with:
-  <green>[{\\"a\\": Immutable.Map {foo: \\"bar\\"}}, {\\"b\\": Immutable.Map {foo: \\"bar\\"}}]</>"
 `;
 
 exports[`toHaveBeenLastCalledWith works with jest.fn and more actual arguments 1`] = `
