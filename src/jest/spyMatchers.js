@@ -28,6 +28,36 @@ const RECEIVED_NAME = {
   spy: "spy"
 };
 
+const IteratorSymbol = Symbol.iterator;
+const hasIterator = object => !!(object != null && object[IteratorSymbol]);
+const iterableEquality = (a, b) => {
+  if (
+    typeof a !== 'object' ||
+    typeof b !== 'object' ||
+    Array.isArray(a) ||
+    Array.isArray(b) ||
+    !hasIterator(a) ||
+    !hasIterator(b)
+  ) {
+    return undefined;
+  }
+  if (a.constructor !== b.constructor) {
+    return false;
+  }
+  const bIterator = b[IteratorSymbol]();
+
+  for (const aValue of a) {
+    const nextB = bIterator.next();
+    if (nextB.done || !equals(aValue, nextB.value, [iterableEquality])) {
+      return false;
+    }
+  }
+  if (!bIterator.next().done) {
+    return false;
+  }
+  return true;
+};
+
 export function createLastCalledWithMatcher(matcherName: string) {
   return (received: any, ...expected: any) => {
     ensureMock(received, matcherName);
@@ -37,7 +67,7 @@ export function createLastCalledWithMatcher(matcherName: string) {
     const calls = receivedIsSpy
       ? received.calls.all().map(x => x.args)
       : received.mock.calls;
-    const pass = equals(calls[calls.length - 1], expected);
+    const pass = equals(calls[calls.length - 1], expected, [iterableEquality]);
 
     const message = pass
       ? () =>
@@ -65,7 +95,7 @@ export function createToBeCalledWithMatcher(matcherName: string) {
     const calls = receivedIsSpy
       ? received.calls.all().map(x => x.args)
       : received.mock.calls;
-    const pass = calls.some(call => equals(call, expected));
+    const pass = calls.some(call => equals(call, expected, [iterableEquality]));
 
     const message = pass
       ? () =>

@@ -74,7 +74,7 @@ const DemoRecord = Immutable.Record({ a: null, b: null });
       ).toThrowErrorMatchingSnapshot();
     });
 
-    xtest(`${calledWith} works with ${mockName} and regular objects within Immutable.js maps`, () => {
+    test(`${calledWith} works with ${mockName} and regular objects within Immutable.js maps`, () => {
       const directlyCreated = new Immutable.Map([["foo", { bar: "baz" }]]);
       const indirectlyCreated = new Immutable.Map().set("foo", { bar: "baz" });
       const fn = getFunction();
@@ -87,7 +87,7 @@ const DemoRecord = Immutable.Record({ a: null, b: null });
       ).toThrowErrorMatchingSnapshot();
     });
 
-    xtest(`${calledWith} works with ${mockName} and regular objects within Immutable.js records`, () => {
+    test(`${calledWith} works with ${mockName} and regular objects within Immutable.js records`, () => {
       const directlyCreated = new DemoRecord({ a: { bar: "baz" } });
       const indirectlyCreated = new DemoRecord().set("a", { bar: "baz" });
       const fn = getFunction();
