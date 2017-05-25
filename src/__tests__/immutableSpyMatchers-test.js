@@ -3,6 +3,7 @@ import "../index";
 
 const directlyCreated = new Immutable.Map([["foo", "bar"]]);
 const indirectlyCreated = new Immutable.Map().set("foo", "bar");
+const DemoRecord = Immutable.Record({ a: null, b: null });
 
 [
   "lastCalledWith",
@@ -37,7 +38,32 @@ const indirectlyCreated = new Immutable.Map().set("foo", "bar");
       ).toThrowErrorMatchingSnapshot();
     });
 
-    test(`${calledWith} works with ${mockName} and Immutable.js objects`, () => {
+    test(`${calledWith} works with ${mockName} and ident Immutable.js maps`, () => {
+      const fn = getFunction();
+      fn(directlyCreated, directlyCreated);
+
+      expect(fn)[calledWith](directlyCreated, directlyCreated);
+
+      expect(() =>
+        expect(fn).not[calledWith](directlyCreated, directlyCreated)
+      ).toThrowErrorMatchingSnapshot();
+    });
+
+    test(`${calledWith} works with ${mockName} and ident Immutable.js maps within regular objects`, () => {
+      const fn = getFunction();
+      fn({ a: directlyCreated }, { b: directlyCreated });
+
+      expect(fn)[calledWith]({ a: directlyCreated }, { b: directlyCreated });
+
+      expect(() =>
+        expect(fn).not[calledWith](
+          { a: directlyCreated },
+          { b: directlyCreated }
+        )
+      ).toThrowErrorMatchingSnapshot();
+    });
+
+    test(`${calledWith} works with ${mockName} and equal Immutable.js maps`, () => {
       const fn = getFunction();
       fn(directlyCreated, indirectlyCreated);
 
@@ -48,7 +74,7 @@ const indirectlyCreated = new Immutable.Map().set("foo", "bar");
       ).toThrowErrorMatchingSnapshot();
     });
 
-    test(`${calledWith} works with ${mockName} and Immutable.js objects within regular objects`, () => {
+    test(`${calledWith} works with ${mockName} and equal Immutable.js maps within regular objects`, () => {
       const fn = getFunction();
       fn({ a: directlyCreated }, { b: indirectlyCreated });
 
@@ -59,6 +85,69 @@ const indirectlyCreated = new Immutable.Map().set("foo", "bar");
           { a: indirectlyCreated },
           { b: directlyCreated }
         )
+      ).toThrowErrorMatchingSnapshot();
+    });
+
+    test(`${calledWith} works with ${mockName} and regular objects within Immutable.js maps`, () => {
+      const directlyCreated = new Immutable.Map([["foo", { bar: "baz" }]]);
+      const indirectlyCreated = new Immutable.Map().set("foo", { bar: "baz" });
+      const fn = getFunction();
+      fn(directlyCreated, indirectlyCreated);
+
+      expect(fn)[calledWith](directlyCreated, indirectlyCreated);
+
+      expect(() =>
+        expect(fn).not[calledWith](directlyCreated, indirectlyCreated)
+      ).toThrowErrorMatchingSnapshot();
+    });
+
+    test(`${calledWith} works with ${mockName} and frozen objects within Immutable.js maps`, () => {
+      const directlyCreated = new Immutable.Map([
+        ["foo", Object.freeze({ bar: "baz" })]
+      ]);
+      const indirectlyCreated = new Immutable.Map().set(
+        "foo",
+        Object.freeze({ bar: "baz" })
+      );
+      const fn = getFunction();
+      fn(directlyCreated, indirectlyCreated);
+
+      expect(fn)[calledWith](directlyCreated, indirectlyCreated);
+
+      expect(() =>
+        expect(fn).not[calledWith](directlyCreated, indirectlyCreated)
+      ).toThrowErrorMatchingSnapshot();
+    });
+
+    test(`${calledWith} works with ${mockName} and regular objects within Immutable.js records`, () => {
+      const directlyCreated = new DemoRecord([["a", { bar: "baz" }]]);
+      const indirectlyCreated = new DemoRecord().set("a", { bar: "baz" });
+      const fn = getFunction();
+      fn(directlyCreated, indirectlyCreated);
+
+      expect(fn)[calledWith](directlyCreated, indirectlyCreated);
+
+      expect(() =>
+        expect(fn).not[calledWith](directlyCreated, indirectlyCreated)
+      ).toThrowErrorMatchingSnapshot();
+    });
+
+    test(`${calledWith} works with ${mockName} and frozen objects within Immutable.js records`, () => {
+      const directlyCreated = new DemoRecord([
+        ["a", Object.freeze({ bar: "baz" })]
+      ]);
+      const indirectlyCreated = new DemoRecord().set(
+        "a",
+        Object.freeze({ bar: "baz" })
+      );
+
+      const fn = getFunction();
+      fn(directlyCreated, indirectlyCreated);
+
+      expect(fn)[calledWith](directlyCreated, indirectlyCreated);
+
+      expect(() =>
+        expect(fn).not[calledWith](directlyCreated, indirectlyCreated)
       ).toThrowErrorMatchingSnapshot();
     });
   });
