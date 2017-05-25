@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`.toContain(), .toContainEqual() 'Immutable.List ["a", "b", "c", "d"]' contains '"a"' 1`] = `
+"<dim>expect(<red>object</><dim>).not.toContain(<green>value</><dim>)
+
+Expected object:
+  <red>Immutable.List [\\"a\\", \\"b\\", \\"c\\", \\"d\\"]</>
+Not to contain value:
+  <green>\\"a\\"</>
+"
+`;
+
+exports[`.toContain(), .toContainEqual() 'Immutable.List ["a", "b", "c", "d"]' does not contain '"e"' 1`] = `
+"<dim>expect(<red>object</><dim>).toContain(<green>value</><dim>)
+
+Expected object:
+  <red>Immutable.List [\\"a\\", \\"b\\", \\"c\\", \\"d\\"]</>
+To contain value:
+  <green>\\"e\\"</>"
+`;
+
+exports[`.toContain(), .toContainEqual() 'Immutable.List [1, 2, 3, 4]' contains '1' 1`] = `
+"<dim>expect(<red>object</><dim>).not.toContain(<green>value</><dim>)
+
+Expected object:
+  <red>Immutable.List [1, 2, 3, 4]</>
+Not to contain value:
+  <green>1</>
+"
+`;
+
+exports[`.toContain(), .toContainEqual() 'Immutable.List [1, 2, 3, 4]' does not contain '5' 1`] = `
+"<dim>expect(<red>object</><dim>).toContain(<green>value</><dim>)
+
+Expected object:
+  <red>Immutable.List [1, 2, 3, 4]</>
+To contain value:
+  <green>5</>"
+`;
+
+exports[`.toContain(), .toContainEqual() 'Immutable.List [Immutable.Map {foo: "bar"}]' contains a value equal to 'Immutable.Map {foo: "bar"}' 1`] = `
+"<dim>expect(<red>object</><dim>).not.toContainEqual(<green>value</><dim>)
+
+Expected object:
+  <red>Immutable.List [Immutable.Map {foo: \\"bar\\"}]</>
+Not to contain a value equal to:
+  <green>Immutable.Map {foo: \\"bar\\"}</>
+"
+`;
+
+exports[`.toContain(), .toContainEqual() 'Immutable.Set ["abc", "def"]' contains '"abc"' 1`] = `
+"<dim>expect(<red>object</><dim>).not.toContain(<green>value</><dim>)
+
+Expected object:
+  <red>Immutable.Set [\\"abc\\", \\"def\\"]</>
+Not to contain value:
+  <green>\\"abc\\"</>
+"
+`;
+
+exports[`.toContain(), .toContainEqual() 'Immutable.Set ["abc", "def"]' does not contain '"ghi"' 1`] = `
+"<dim>expect(<red>object</><dim>).toContain(<green>value</><dim>)
+
+Expected object:
+  <red>Immutable.Set [\\"abc\\", \\"def\\"]</>
+To contain value:
+  <green>\\"ghi\\"</>"
+`;
+
+exports[`.toContain(), .toContainEqual() 'Immutable.Set [1, 2]' contains '1' 1`] = `
+"<dim>expect(<red>object</><dim>).not.toContain(<green>value</><dim>)
+
+Expected object:
+  <red>Immutable.Set [1, 2]</>
+Not to contain value:
+  <green>1</>
+"
+`;
+
+exports[`.toContain(), .toContainEqual() 'Immutable.Set [1, 2]' does not contain '3' 1`] = `
+"<dim>expect(<red>object</><dim>).toContain(<green>value</><dim>)
+
+Expected object:
+  <red>Immutable.Set [1, 2]</>
+To contain value:
+  <green>3</>"
+`;
+
+exports[`.toContain(), .toContainEqual() 'Immutable.Set [Immutable.Map {foo: "bar"}]' contains a value equal to 'Immutable.Map {foo: "bar"}' 1`] = `
+"<dim>expect(<red>object</><dim>).not.toContainEqual(<green>value</><dim>)
+
+Expected object:
+  <red>Immutable.Set [Immutable.Map {foo: \\"bar\\"}]</>
+Not to contain a value equal to:
+  <green>Immutable.Map {foo: \\"bar\\"}</>
+"
+`;
+
+exports[`.toEqual() expect([Immutable.Map {foo: "bar"}]).toEqual([Immutable.Map {foo: "bar"}]) 1`] = `
+"<dim>expect(<red>received</><dim>).not.toEqual(<green>expected</><dim>)
+
+Expected value to not equal:
+  <green>[Immutable.Map {foo: \\"bar\\"}]</>
+Received:
+  <red>[Immutable.Map {foo: \\"bar\\"}]</>"
+`;
+
+exports[`.toEqual() expect({"a": Immutable.Map {foo: "bar"}}).toEqual({"a": Immutable.Map {foo: "bar"}}) 1`] = `
+"<dim>expect(<red>received</><dim>).not.toEqual(<green>expected</><dim>)
+
+Expected value to not equal:
+  <green>{\\"a\\": Immutable.Map {foo: \\"bar\\"}}</>
+Received:
+  <red>{\\"a\\": Immutable.Map {foo: \\"bar\\"}}</>"
+`;
+
+exports[`.toEqual() expect(Immutable.Map {foo: "bar"}).toEqual(Immutable.Map {foo: "bar"}) 1`] = `
+"<dim>expect(<red>received</><dim>).not.toEqual(<green>expected</><dim>)
+
+Expected value to not equal:
+  <green>Immutable.Map {foo: \\"bar\\"}</>
+Received:
+  <red>Immutable.Map {foo: \\"bar\\"}</>"
+`;
