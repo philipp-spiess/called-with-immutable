@@ -25,7 +25,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 /* eslint-disable */
 
-import { isValueObject } from './immutable/utils'
+import { isValueObject } from "./immutable/utils";
 
 type Tester = (a: any, b: any) => boolean | typeof undefined;
 

@@ -1,18 +1,14 @@
 const expect = require("jest-matchers");
-import { createToBeCalledWithMatcher } from "./jest/spyMatchers";
+import {
+  createToBeCalledWithMatcher,
+  createLastCalledWithMatcher
+} from "./jest/spyMatchers";
 
 expect.extend({
-  toBeCalledWithImmutable: createToBeCalledWithMatcher(
-    ".toBeCalledWithImmutable"
-  ),
-  toHaveBeenCalledWithImmutable: createToBeCalledWithMatcher(
-    ".toHaveBeenCalledWithImmutable"
+  lastCalledWith: createLastCalledWithMatcher(".lastCalledWith"),
+  toBeCalledWith: createToBeCalledWithMatcher(".toBeCalledWith"),
+  toHaveBeenCalledWith: createToBeCalledWithMatcher(".toHaveBeenCalledWith"),
+  toHaveBeenLastCalledWith: createLastCalledWithMatcher(
+    ".toHaveBeenLastCalledWith"
   )
 });
-
-export function overwriteDefaults() {
-  expect.extend({
-    toBeCalledWith: createToBeCalledWithMatcher(".toBeCalledWith"),
-    toHaveBeenCalledWith: createToBeCalledWithMatcher(".toHaveBeenCalledWith")
-  });
-}

@@ -8,8 +8,7 @@
  * @emails oncall+jsinfra
  */
 
-import { overwriteDefaults } from "../../";
-overwriteDefaults();
+import "../../";
 
 [
   ["toHaveBeenCalled", "jasmine.createSpy"],

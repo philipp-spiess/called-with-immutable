@@ -28,6 +28,34 @@ const RECEIVED_NAME = {
   spy: "spy"
 };
 
+export function createLastCalledWithMatcher(matcherName: string) {
+  return (received: any, ...expected: any) => {
+    ensureMock(received, matcherName);
+
+    const receivedIsSpy = isSpy(received);
+    const type = receivedIsSpy ? "spy" : "mock function";
+    const calls = receivedIsSpy
+      ? received.calls.all().map(x => x.args)
+      : received.mock.calls;
+    const pass = equals(calls[calls.length - 1], expected);
+
+    const message = pass
+      ? () =>
+          matcherHint(".not" + matcherName, RECEIVED_NAME[type]) +
+          "\n\n" +
+          `Expected ${type} to not have been last called with:\n` +
+          `  ${printExpected(expected)}`
+      : () =>
+          matcherHint(matcherName, RECEIVED_NAME[type]) +
+          "\n\n" +
+          `Expected ${type} to have been last called with:\n` +
+          `  ${printExpected(expected)}\n` +
+          formatReceivedCalls(calls, LAST_CALL_PRINT_LIMIT, { isLast: true });
+
+    return { message, pass };
+  };
+}
+
 export function createToBeCalledWithMatcher(matcherName: string) {
   return (received: any, ...expected: any) => {
     ensureMock(received, matcherName);
